@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSG Research LLC | Market Research & Strategy</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        csg: {
+                            deep: '#00565f',
+                            light: '#b0dadc',
+                            gold: '#e9c46a',
+                            dark: '#003339',
+                            muted: '#f2f8f8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-csg-light selection:text-csg-dark">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <img src="logo.svg" alt="CSG Research Logo">
+<!--            <!{1}** CSG Research Logo (Vector) **{1}>-->
+<!--            <a href="#" class="flex items-center gap-2 group py-2">
+                <svg viewBox="0 0 310 180" class="h-12 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="110" font-family="'Century Gothic', 'Avant Garde', 'Montserrat', sans-serif" font-weight="900" font-size="115" fill="#00565f" letter-spacing="-2">CSG</text>
+                    <text x="5" y="170" font-family="'Century Gothic', 'Avant Garde', 'Montserrat', sans-serif" font-weight="400" font-size="52" fill="#00565f" letter-spacing="10">research</text>
+                    <g transform="translate(242, 5)">
+                        <path d="M 55,0 L 0,22 L 26,32 Z" fill="none" stroke="#00565f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M 55,0 L 26,32 L 34,58 Z" fill="#00565f" stroke="#00565f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                </svg>
+            </a>-->
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#about" class="hover:text-csg-deep transition-colors">Who We Are</a>
+                <a href="#services" class="hover:text-csg-deep transition-colors">Capabilities</a>
+                <a href="#methodology" class="hover:text-csg-deep transition-colors">Methodology</a>
+                <a href="#impact" class="hover:text-csg-deep transition-colors">Impact</a>
+                <a href="#contact" class="hover:text-csg-deep transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden md:flex items-center">
+                <a href="#contact" class="bg-csg-deep hover:bg-csg-dark text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all shadow-sm">
+                    Request Proposal
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-csg-deep text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 font-semibold text-slate-700">
+            <a href="#about" class="block hover:text-csg-deep py-1">Who We Are</a>
+            <a href="#services" class="block hover:text-csg-deep py-1">Capabilities</a>
+            <a href="#methodology" class="block hover:text-csg-deep py-1">Methodology</a>
+            <a href="#impact" class="block hover:text-csg-deep py-1">Impact</a>
+            <a href="#contact" class="block hover:text-csg-deep py-1">Contact</a>
+            <a href="#contact" class="block text-center bg-csg-deep text-white py-2 rounded-lg mt-2">Request Proposal</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-csg-dark text-white py-24 lg:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#b0dadc_1px,transparent_1px)] [background-size:20px_20px]"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-csg-deep/60 text-csg-light text-xs font-bold uppercase tracking-wider mb-6 border border-csg-light/20">
+                    <span class="w-2 h-2 rounded-full bg-csg-gold animate-pulse"></span> CSG Research LLC
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight text-white mb-6">
+                    Clarity Driven by Evidence. Strategy Fueled by Data.
+                </h1>
+                <p class="text-lg sm:text-xl text-csg-light/90 mb-8 leading-relaxed font-normal">
+                    We equip industry leaders, enterprise organizations, and growth brands with decision-grade primary research and market intelligence.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-csg-gold hover:bg-[#d8b55b] text-csg-dark font-bold text-center px-8 py-4 rounded-lg transition-all shadow-lg shadow-csg-gold/20">
+                        Work With Us
+                    </a>
+                    <a href="#services" class="bg-csg-deep/40 hover:bg-csg-deep text-csg-light font-semibold text-center px-8 py-4 rounded-lg border border-csg-light/30 transition-all">
+                        Our Capabilities
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section id="about" class="py-24 bg-csg-muted border-b border-csg-light/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-csg-deep mb-2">Leadership & Expertise</h2>
+                <p class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">Who We Are</p>
+                <p class="text-slate-600 text-sm mt-3">Our team of senior strategists, data scientists, and qualitative analysts bring decades of combined enterprise research experience.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Person 1 -->
+                <div class="bg-white rounded-2xl border border-csg-light/40 overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                        <img src="chris.jpeg" alt="Chris Kuty" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900">Chris Kuty</h3>
+                        <p class="text-xs font-bold uppercase tracking-wider text-csg-deep mt-1 mb-3">Handsome Devil</p>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            MBA something or other, MFA in fun things
+                        </p>
+<!--                        <div class="flex items-center gap-4 text-slate-400">
+                            <a href="#" class="hover:text-csg-deep transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                            <a href="#" class="hover:text-csg-deep transition-colors"><i class="fa-solid fa-envelope text-lg"></i></a>
+                        </div>-->
+                    </div>
+                </div>
+
+                <!-- Person 2 -->
+                <div class="bg-white rounded-2xl border border-csg-light/40 overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                        <img src="gabbie.png" alt="Gabrielle Gillespie" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900">Gabrielle Gillespie</h3>
+                        <p class="text-xs font-bold uppercase tracking-wider text-csg-deep mt-1 mb-3">Head of Quantitative Analytics</p>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Specializes in conjoint measurement, price elasticity algorithms, and complex B2B audience segmentation across technology and healthcare sectors.
+                        </p>
+<!--                        <div class="flex items-center gap-4 text-slate-400">
+                            <a href="#" class="hover:text-csg-deep transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                            <a href="#" class="hover:text-csg-deep transition-colors"><i class="fa-solid fa-envelope text-lg"></i></a>
+                        </div>-->
+                    </div>
+                </div>
+
+                <!-- Person 3 -->
+                <div class="bg-white rounded-2xl border border-csg-light/40 overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                    <div class="aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                        <img src="sean.jpeg" alt="Sean D. Kuty" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900">Sean D. Kuty</h3>
+                        <p class="text-xs font-bold uppercase tracking-wider text-csg-deep mt-1 mb-3">Director of Research Programming</p>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            I bridge the gap between theory and execution by turning your study guides into functional, methodologically rigorous research interviews.
+                        </p>
+<!--                        <div class="flex items-center gap-4 text-slate-400">
+                            <a href="#" class="hover:text-csg-deep transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                            <a href="#" class="hover:text-csg-deep transition-colors"><i class="fa-solid fa-envelope text-lg"></i></a>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-csg-deep mb-2">Research Practice Areas</h2>
+                <p class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">Custom Research Solutions</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-2xl bg-csg-muted border border-csg-light/40 hover:border-csg-deep hover:shadow-xl transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-csg-deep text-csg-gold flex items-center justify-center text-xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Quantitative Intelligence</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Statistical modeling, conjoint studies, pricing elasticity, and nationwide panel surveys designed to deliver statistical rigor.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-8 rounded-2xl bg-csg-muted border border-csg-light/40 hover:border-csg-deep hover:shadow-xl transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-csg-deep text-csg-gold flex items-center justify-center text-xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Qualitative Research</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        In-depth stakeholder interviews (IDIs), focus group moderation, and ethnographic field studies capturing nuanced human behavior.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-8 rounded-2xl bg-csg-muted border border-csg-light/40 hover:border-csg-deep hover:shadow-xl transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-csg-deep text-csg-gold flex items-center justify-center text-xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Brand & Product Positioning</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Segmentation analysis, message testing, and customer journey mapping tailored to maximize brand differentiation and conversion.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="methodology" class="py-24 bg-csg-dark text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-csg-gold mb-2">How CSG Research Operates</h2>
+                    <p class="text-3xl font-extrabold tracking-tight sm:text-4xl mb-6">Built for Executive Decision-Makers</p>
+                    <p class="text-csg-light/80 mb-8 leading-relaxed">
+                        We skip dense, generic reports. CSG Research LLC delivers executive-ready briefs, interactive data models, and clear recommendations designed for immediate implementation.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-csg-deep text-csg-gold border border-csg-light/20 flex items-center justify-center font-bold text-sm shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-slate-100">Study Design & Framing</h4>
+                                <p class="text-csg-light/70 text-sm mt-1">We align survey instrumentation directly with key business objectives.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-csg-deep text-csg-gold border border-csg-light/20 flex items-center justify-center font-bold text-sm shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-slate-100">Rigorous Data Collection</h4>
+                                <p class="text-csg-light/70 text-sm mt-1">Multi-stage data cleaning and validation to eliminate noise and fraud.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-csg-deep text-csg-gold border border-csg-light/20 flex items-center justify-center font-bold text-sm shrink-0">3</div>
+                            <div>
+                                <h4 class="font-bold text-slate-100">Strategic Synthesis</h4>
+                                <p class="text-csg-light/70 text-sm mt-1">Translating complex cross-tabs into definitive market action plans.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Box -->
+                <div id="impact" class="bg-csg-deep/60 p-8 rounded-3xl border border-csg-light/20 grid grid-cols-2 gap-6 text-center">
+                    <div class="p-6 bg-csg-dark/80 rounded-2xl border border-csg-light/10">
+                        <div class="text-4xl font-black text-csg-gold mb-1">99%</div>
+                        <div class="text-xs uppercase font-semibold text-csg-light/80">Data Verification Rate</div>
+                    </div>
+                    <div class="p-6 bg-csg-dark/80 rounded-2xl border border-csg-light/10">
+                        <div class="text-4xl font-black text-csg-gold mb-1">500+</div>
+                        <div class="text-xs uppercase font-semibold text-csg-light/80">Custom Studies</div>
+                    </div>
+                    <div class="p-6 bg-csg-dark/80 rounded-2xl border border-csg-light/10">
+                        <div class="text-4xl font-black text-csg-gold mb-1">B2B/B2C</div>
+                        <div class="text-xs uppercase font-semibold text-csg-light/80">Global Panel Reach</div>
+                    </div>
+                    <div class="p-6 bg-csg-dark/80 rounded-2xl border border-csg-light/10">
+                        <div class="text-4xl font-black text-csg-gold mb-1">100%</div>
+                        <div class="text-xs uppercase font-semibold text-csg-light/80">Tailored Research</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-csg-muted">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-white p-8 md:p-12 rounded-3xl border border-csg-light/40 shadow-xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Initiate a Research Project</h2>
+                    <p class="text-slate-500 text-sm mt-2">Connect directly with a principal research partner at CSG Research LLC.</p>
+                </div>
+
+                <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you for contacting CSG Research LLC! We will review your inquiry immediately.');">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-csg-deep mb-2">Name</label>
+                            <input type="text" required placeholder="Jane Doe" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-csg-deep focus:bg-white transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-csg-deep mb-2">Work Email</label>
+                            <input type="email" required placeholder="jane@organization.com" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-csg-deep focus:bg-white transition-all">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-csg-deep mb-2">Research Scope & Objectives</label>
+                        <textarea rows="4" required placeholder="Outline target demographics, research methodologies of interest, or project timelines..." class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-csg-deep focus:bg-white transition-all"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-csg-deep hover:bg-csg-dark text-white font-bold py-4 rounded-lg transition-all shadow-md">
+                        Submit RFP / Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-csg-dark text-csg-light/70 py-12 border-t border-csg-deep">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-sm">
+                &copy; 2026 CSG Research LLC. All rights reserved.
+            </div>
+            <div class="flex gap-6 text-csg-light">
+                <a href="#" class="hover:text-csg-gold transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                <a href="#" class="hover:text-csg-gold transition-colors"><i class="fa-brands fa-x-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-csg-gold transition-colors"><i class="fa-solid fa-envelope text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
