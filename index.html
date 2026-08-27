@@ -283,39 +283,50 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-csg-muted">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="bg-white p-8 md:p-12 rounded-3xl border border-csg-light/40 shadow-xl">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Send us a message</h2>
-                    <p class="text-slate-500 text-sm mt-2">Connect directly with us, ask us a question or tell us your thoughts.</p>
-                </div>
-
-                <form class="space-y-6" action="https://formsubmit.co/contact@csgresearch.com" method="POST" onsubmit="event.preventDefault(); alert('Thank you for contacting CSG Research LLC! We will review your inquiry immediately.');">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-csg-deep mb-2">Name</label>
-                            <input type="text" name="name" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-csg-deep focus:bg-white transition-all">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-csg-deep mb-2">Email</label>
-                            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-csg-deep focus:bg-white transition-all">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-csg-deep mb-2">How can we help you?</label>
-                        <textarea rows="4" name="message" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-csg-deep focus:bg-white transition-all"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full bg-csg-deep hover:bg-csg-dark text-white font-bold py-4 rounded-lg transition-all shadow-md">
-                        Send!
-                    </button>
-                </form>
-            </div>
+<form id="contact-form" class="space-y-6">
+    <div class="grid md:grid-cols-2 gap-6">
+        <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-csg-deep mb-2">Name</label>
+            <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-csg-deep focus:bg-white transition-all">
         </div>
-    </section>
+        <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-csg-deep mb-2">Email</label>
+            <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-csg-deep focus:bg-white transition-all">
+        </div>
+    </div>
+
+    <div>
+        <label class="block text-xs font-bold uppercase tracking-wider text-csg-deep mb-2">How can we help you?</label>
+        <textarea rows="4" name="message" required class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-csg-deep focus:bg-white transition-all"></textarea>
+    </div>
+
+    <button type="submit" class="w-full bg-csg-deep hover:bg-csg-dark text-white font-bold py-4 rounded-lg transition-all shadow-md">
+        Send!
+    </button>
+</form>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = this;
+        
+        fetch('https://formsubmit.co/ajax/contact@csgresearch.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Thank you for contacting CSG Research LLC! We will review your inquiry immediately.');
+            form.reset();
+        })
+        .catch(error => alert('Oops! Something went wrong sending your message.'));
+    });
+</script>
 
     <!-- Footer -->
     <footer class="bg-csg-dark text-csg-light/70 py-12 border-t border-csg-deep">
